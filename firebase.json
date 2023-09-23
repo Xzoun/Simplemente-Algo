@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "../Simplemente Algo",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

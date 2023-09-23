@@ -1,0 +1,276 @@
+/* -------------------------------------- Pantalla principal -------------------------------------- */
+
+
+body {
+  margin: 2%;
+  padding: 2%;
+}
+
+.general {
+  padding: 5%;
+}
+
+#tituloContenedor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#inicio {
+  text-align: center;
+}
+
+#barraRecta {
+  display: none;
+}
+
+#formato {
+  display: flex;
+  width: 40%;
+  margin: 0 30%;
+  gap: 2%;
+}
+
+#textoContenedor {
+  display: none;
+}
+
+#volver {
+  display: none;
+}
+
+.subtitulo {
+  text-align: left;
+}
+
+.footer {
+  border-top: solid rgb(0, 217, 255) 1px;
+  padding-top: 5%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+/* -------------------------------------- Scroll Bar -------------------------------------- */
+
+
+body::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0);
+  width: 7px;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 7px;
+  background: #80bdff78;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 217, 255);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* --------------------------------------  Checkpoints -------------------------------------- */
+
+
+#contenedorCheckpoint {
+  width: 100%;
+  border: solid rgb(0, 217, 255) 1px;
+  color: white;
+  font-weight: 600;
+}
+
+#contenedorCheckpoint .card-header {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  border-bottom: solid rgb(0, 217, 255) 1px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cargarCards {
+  border: none;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cargarCards:focus {
+  outline: none;
+}
+
+.deleteCheckpoint {
+  visibility: hidden;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(186, 35, 35);
+  border-radius: 50px;
+}
+
+.deleteCheckpoint:hover {
+  color: rgb(255, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.checkpoint:hover {
+  background-color: #80bdff;
+}
+
+#contenedorCheckpoint .checkpoint:hover .card-header {
+  border-bottom: solid white 1px;
+  font-weight: 600;
+}
+
+.checkpoint:hover .deleteCheckpoint {
+  visibility: visible;
+}
+
+.codigo {
+  display: none;
+}
+
+/* --------------------------------------  Alerta | Error de Codigo -------------------------------------- */
+
+
+.hide {
+  display: none !important;
+}
+
+.position {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+}
+
+
+/* --------------------------------------  Historias || Salida de texto -------------------------------------- */
+
+
+#textoContenedor {
+  margin-top: 50px;
+}
+
+#texto-animado {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#opciones {
+  text-align: center;
+  display: none;
+}
+
+p {
+  text-indent: 20px;
+}
+
+.audios {
+  display: none;
+}
+
+/* --------------------------------------  Historias || Controles de Audio y Texto -------------------------------------- */
+
+#controles {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 2%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+  visibility: hidden;
+}
+
+#saltar,
+#pausar {
+  border: none;
+}
+
+@media (max-width: 768px) {
+
+  /* -------------------------------------- General -------------------------------------- */
+  .general {
+    padding: 2%;
+  }
+
+  /* -------------------------------------- Pantalla principal -------------------------------------- */
+
+  #barraRecta {
+    visibility: hidden;
+  }
+
+  #arco {
+    visibility: visible;
+  }
+
+  #tituloContenedor {
+    display: block;
+    text-align: left;
+  }
+
+  #inicio {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #border {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 6%;
+  }
+
+  #formato {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .deleteCheckpoint {
+    visibility: visible;
+  }
+
+
+  /* --------------------------------------  Alerta | Error de Codigo -------------------------------------- */
+
+
+  .position {
+    top: 130px;
+  }
+
+
+  /* --------------------------------------  Historias -------------------------------------- */
+
+
+  #textoContenedor {
+    margin-top: 50px;
+  }
+
+  #opciones {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* --------------------------------------  Footer -------------------------------------- */
+  h6.footer {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 1200px) {}

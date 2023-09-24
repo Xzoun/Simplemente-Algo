@@ -1,5 +1,4 @@
-import { historia, titulo, opciones } from "./texto.js";
-import { lectura, coordinacion, pausarAudio } from "./audio.js";
+import { historia, titulo, opciones, lectura, coordinacion, pausarAudio } from "./bd.js";
 
 const guardarBtn = document.getElementById("guardar"),
   textoAnimado = document.getElementById("textoAnimado"),
@@ -142,7 +141,6 @@ function despertarProbabilidad(codigo) {
 nuevaHistoria.addEventListener("click", async () => {
   document.getElementById("inicio").style.display = "none";
   document.getElementById("textoContenedor").style.display = "block";
-  document.getElementById("barraRecta").style.display = "block";
   guardarBtn.style.display = "none";
 
   titulo();

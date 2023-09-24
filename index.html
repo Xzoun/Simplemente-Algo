@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./Css/texto.css">
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage-compat.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
     <div id="tituloContenedor" class="absolute-top z-0">
         <h1 id="titulo" class="card-header"></h1>
-        <h2 id="barraRecta">| <span id="arco"></span></h2>
+        <h2 id="arco"></h2>
     </div>
     <!-- ---------------------------------------- Bienvenida ------------------------------------------------ -->
     <div class="general">
@@ -45,9 +46,12 @@
         <!-- ---------------------------------------- Salida del Texto ------------------------------------------------ -->
 
         <div id="textoContenedor">
+
             <div id="controles">
-                <button type="button" class="btn btn-outline-info" id="pausar">Pausar</button>
-                <button type="button" class="btn btn-outline-info" id="saltar">Saltar al final</button>
+                <div class="contenedorControles">
+                    <button type="button" class="btn btn-outline-info" id="pausar">Pausar</button>
+                    <button type="button" class="btn btn-outline-info" id="saltar">Saltar al final</button>
+                </div>
             </div>
             <p id="textoAnimado"></p>
         </div>
@@ -55,18 +59,18 @@
         <!-- ---------------------------------------- Opciones ------------------------------------------------ -->
 
         <div id="opciones" class="btn-group" role="group" aria-label="Basic outlined example">
-            <button id="opcion1" data-codigo="1" type="button" class="btn btn-outline-info"></button>
-            <button id="opcion2" data-codigo="2" type="button" class="btn btn-outline-info"></button>
-            <button id="opcion3" data-codigo="3" type="button" class="btn btn-outline-info"></button>
-            <button id="guardar" type="button" class="btn btn-outline-info">Guardar progreso</button>
-            <button id="volver" type="button" class="btn btn-outline-info" src="index.html">Volver al menú
+            <button id="opcion1" data-codigo="1" type="button" class="btn btn-dark"></button>
+            <button id="opcion2" data-codigo="2" type="button" class="btn btn-dark"></button>
+            <button id="opcion3" data-codigo="3" type="button" class="btn btn-dark"></button>
+            <button id="guardar" type="button" class="btn btn-dark">Guardar progreso</button>
+            <button id="volver" type="button" class="btn btn-dark" src="index.html">Volver al menú
                 principal</button>
         </div>
         <!-- ---------------------------------------- Footer ------------------------------------------------ -->
         <footer>
             <h6 class="footer">Escrito, grabado y diseñado por <a target="_blank"
                     href="https://www.instagram.com/lebenitez_/"
-                    class="link-info  link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">LeBenitez!</a>
+                    class="link-dark  link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">LeBenitez!</a>
             </h6>
         </footer>
     </div>
